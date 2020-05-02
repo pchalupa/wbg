@@ -1,0 +1,32 @@
+@import '../../Colors.scss';
+@import '../../Animations.scss';
+
+.container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $cw;
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		width: 75%;
+		height: 65%;
+		padding: 5%;
+		background-color: $cp;
+		border-radius: 2vmax;
+
+		#logo {
+			width: 20vmax;
+		}
+	}
+
+	#hero {
+		position: absolute;
+		align-self: flex-start;
+		right: 0;
+		max-width: 45%;
+	}
+}
