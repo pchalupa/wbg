@@ -20,20 +20,23 @@ function Instagram(props) {
 				}
 			);
 	}, [props.accountName]);
+
+	const getCount = () => {
+		return props.count > 0 ? props.count : Math.round(window.innerWidth / 320) * 2;
+	};
+
 	return (
-		<section className={styles.container}>
+		<section id="fotogalerie" className={styles.container}>
 			<h2>{props.title}</h2>
 			{isLoaded ? (
 				<div className={styles.grid}>
-					{images.slice(0, props.count).map((image, index) => (
+					{images.slice(0, getCount()).map((image, index) => (
 						<a href={image.node.display_url} className={styles.wrapper} key={index}>
-							<figure>
-								<img
-									src={image.node.thumbnail_resources[props.thumbnailResolution].src}
-									className={styles.image}
-									alt={image.node.accessibility_caption}
-								/>
-							</figure>
+							<img
+								src={image.node.thumbnail_resources[props.thumbnailResolution].src}
+								className={styles.image}
+								alt={image.node.accessibility_caption}
+							/>
 						</a>
 					))}
 				</div>
@@ -54,7 +57,7 @@ Instagram.propTypes = {
 Instagram.defaultProps = {
 	accountName: 'waterbouldergames',
 	count: 8,
-	thumbnailResolution: 1,
+	thumbnailResolution: 2,
 	title: 'Fotogalerie',
 };
 
