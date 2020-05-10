@@ -1,0 +1,17 @@
+@import '../../Colors.scss';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.text {
+		width: 60%;
+	}
+
+	.video {
+		width: 50vmax;
+		height: 100%;
+	}
+}
