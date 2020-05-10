@@ -1,0 +1,19 @@
+@import './Colors.scss';
+
+.container {
+	width: 100vw;
+	overflow-x: hidden;
+
+	.wrapper {
+		display: grid;
+		grid-template-rows: 50vh 30vh 1fr 50vh 25vh 0.25fr;
+		grid-template-areas:
+			'hero'
+			'about'
+			'photogallery'
+			'registraction'
+			'map'
+			'sponzors';
+		grid-gap: 5vh;
+	}
+}
