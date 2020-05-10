@@ -1,0 +1,19 @@
+@import '../../Colors.scss';
+@import '../../Tools.scss';
+
+.wrapper {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 5vh;
+	height: 5vh;
+	top: 3vh;
+	left: 3vw;
+	background-color: lighten($cb, 90);
+	border: none;
+	border-radius: 2.5vh;
+	z-index: 110;
+
+	@include drop-shadow;
+}
