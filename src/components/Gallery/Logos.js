@@ -9,7 +9,7 @@ import rockPoint from '../../Images/Sponsors/rock_point.png';
 
 function Logos(props) {
 	return (
-		<section className={styles.container}>
+		<section id="sponzori" className={styles.container}>
 			<h2>{props.title}</h2>
 			<div className={styles.wrapper}>
 				<figure>
