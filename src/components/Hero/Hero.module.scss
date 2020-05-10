@@ -1,22 +1,23 @@
 @import '../../Colors.scss';
 @import '../../Animations.scss';
+@import '../../Tools.scss';
 
 .container {
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: $cw;
 
 	.wrapper {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
-		width: 75%;
-		height: 65%;
-		padding: 5%;
+		width: 70%;
+		height: 60%;
+		padding: 5% 5%;
 		background-color: $cp;
-		border-radius: 2vmax;
+		@include border-radius;
+		@include drop-shadow;
 
 		#logo {
 			width: 20vmax;
@@ -27,6 +28,12 @@
 		position: absolute;
 		align-self: flex-start;
 		right: 0;
-		max-width: 45%;
+		max-width: 35vw;
+	}
+
+	@media screen and (max-width: 760px) {
+		#hero {
+			display: none;
+		}
 	}
 }
