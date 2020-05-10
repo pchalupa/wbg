@@ -9,7 +9,7 @@ function ContactForm(props) {
 	const sendEmail = () => {};
 
 	return (
-		<section className={styles.container}>
+		<section id="registrace" className={styles.container}>
 			<h2>{props.title}</h2>
 			<form className={styles.form}>
 				<label>
@@ -38,7 +38,9 @@ function ContactForm(props) {
 	);
 }
 
-ContactForm.propTypes = {};
+ContactForm.propTypes = {
+	title: PropTypes.string,
+};
 
 ContactForm.defaultProps = {
 	title: 'Kontaktní formulář',
