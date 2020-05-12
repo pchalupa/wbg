@@ -1,0 +1,10 @@
+@import '../../Colors.scss';
+
+.container {
+	position: fixed;
+	top: 0;
+	height: 1vh;
+	background-color: lighten($cb, 90);
+	transition: 50ms ease-in-out;
+	z-index: 90;
+}
