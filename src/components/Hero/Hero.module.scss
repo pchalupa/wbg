@@ -4,16 +4,13 @@
 
 .container {
 	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	padding: 10vh 10vw;
 
 	.wrapper {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
-		width: 70%;
-		height: 60%;
+		max-height: 30vh;
 		padding: 5% 5%;
 		background-color: $cp;
 		@include border-radius;
@@ -27,6 +24,7 @@
 	#hero {
 		position: absolute;
 		align-self: flex-start;
+		top: 0;
 		right: 0;
 		max-width: 35vw;
 	}
