@@ -27,7 +27,6 @@ function Instagram(props) {
 
 	return (
 		<section id="fotogalerie" className={styles.container}>
-			<h2>{props.title}</h2>
 			{isLoaded ? (
 				<div className={styles.grid}>
 					{images.slice(0, getCount()).map((image, index) => (
