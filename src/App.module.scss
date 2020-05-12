@@ -6,7 +6,7 @@
 
 	.wrapper {
 		display: grid;
-		grid-template-rows: 50vh 30vh 1fr 50vh 25vh 0.25fr;
+		grid-template-rows: 50vh auto 1fr 50vh auto 0.25fr;
 		grid-template-areas:
 			'hero'
 			'about'
