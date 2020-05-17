@@ -50,7 +50,7 @@
 		}
 
 		&.active {
-			grid-template-columns: 35vw;
+			grid-template-columns: 35vmax;
 			opacity: 1;
 			@include drop-shadow;
 		}
