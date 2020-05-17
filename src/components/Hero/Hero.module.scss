@@ -4,20 +4,39 @@
 
 .container {
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex: 50vh;
 	padding: 10vh 10vw;
+
+	#logo {
+		width: 20vh;
+	}
 
 	.wrapper {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
-		max-height: 30vh;
-		padding: 5% 5%;
+		flex: 100%;
+		padding: 2.5vmax 5vmax;
 		background-color: $cp;
 		@include border-radius;
 		@include drop-shadow;
 
-		#logo {
-			width: 20vmax;
+		.video {
+			align-self: center;
+			color: $cb;
+
+			svg {
+				height: 6vh;
+				width: auto;
+				transition: 100ms ease-in;
+			}
+
+			&:hover svg {
+				transform: scale(1.1);
+				transition: 100ms ease-out;
+			}
 		}
 	}
 
