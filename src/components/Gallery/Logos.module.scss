@@ -5,14 +5,20 @@
 	justify-content: center;
 
 	.wrapper {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
 		width: 75%;
 
 		figure {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			flex: 1 1 0;
+			max-width: 190px;
+			min-width: 155px;
+
 			img {
 				width: 100%;
 			}
