@@ -4,9 +4,35 @@ import styles from './ContactForm.module.scss';
 
 function ContactForm(props) {
 	const [isSent, setSent] = useState(false);
+	const [data, setData] = useState(new Map());
 
-	const handleInputChange = (event) => {};
-	const sendEmail = () => {};
+	const handleInputChange = ({ target }) => {
+		setData(data.set(target.name, target.value));
+	};
+
+	const handleSendForm = async (event) => {
+		event.preventDefault();
+		sendEmail();
+		const formData = new FormData();
+		for (const [key, value] of data.entries()) {
+			formData.append(key, value);
+		}
+		try {
+			const request = await fetch('https://wbg.cz/register.php', {
+				method: 'post',
+				headers: {
+					'Content-Type': 'multipart/form-data',
+				},
+				body: formData,
+			});
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
+	const sendEmail = () => {
+		setSent(true);
+	};
 
 	return (
 		<section id="registrace" className={styles.container}>
@@ -14,25 +40,25 @@ function ContactForm(props) {
 			<form className={styles.form}>
 				<label>
 					<span>Jméno</span>
-					<input type="text" name="firstaname" placeholder="Jméno" />
+					<input type="text" name="firstaname" onChange={handleInputChange} />
 				</label>
 				<label>
 					<span>Přijmení</span>
-					<input type="text" name="surname" placeholder="Přijmení" />
+					<input type="text" name="surname" onChange={handleInputChange} />
 				</label>
 				<label>
 					<span>E-mail</span>
-					<input type="text" name="email" placeholder="E-mail" />
+					<input type="text" name="email" onChange={handleInputChange} />
 				</label>
 				<label>
 					<span>Telefon</span>
-					<input type="text" name="telephone" placeholder="Telefon" />
+					<input type="text" name="telephone" onChange={handleInputChange} />
 				</label>
-				<label id={styles.message}>
+				<label>
 					<span>Zpráva</span>
-					<textarea></textarea>
+					<textarea rows="10" name="message" onChange={handleInputChange}></textarea>
 				</label>
-				<input type="submit" id={styles.submit} />
+				<input type="submit" id={styles.submit} onClick={handleSendForm} value="Registrovat" />
 			</form>
 		</section>
 	);

@@ -1,3 +1,6 @@
+@import '../../Colors.scss';
+@import '../../Tools.scss';
+
 .container {
 	display: flex;
 	flex-direction: column;
@@ -13,16 +16,48 @@
 		label {
 			display: flex;
 			flex-direction: column;
-			width: 50%;
+			flex: 40%;
 			min-width: 245px;
+			margin: 3vh 5%;
 
-			&#message {
+			span {
+				font-weight: 700;
+				margin-bottom: 1vh;
+				text-transform: uppercase;
+			}
+
+			input,
+			textarea {
+				border: none;
+				background-color: rgba($cb, 0.05);
+				border-radius: 1vmax;
+				padding: 1vmax;
+				outline: none;
+				font-weight: 700;
+			}
+
+			input {
+				height: 5vh;
+			}
+
+			textarea {
+				resize: none;
 				width: 100%;
 			}
 		}
 
 		#submit {
 			width: 100%;
+			margin: 5vh 25%;
+			padding: 2vh;
+			border: none;
+			border-radius: 1vmax;
+			background-color: $cp;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 1.5vh;
+			cursor: pointer;
 		}
 	}
 }
