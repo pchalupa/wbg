@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import LazyImage from '../Image/LazyImage';
 import styles from './Instagram.module.scss';
+import rings from './rings.svg';
 
 function Instagram(props) {
-	const [isLoaded, setIsLoaded] = useState(false);
+	const [isLoaded, setLoaded] = useState(false);
 	const [images, setImages] = useState([]);
 
 	useEffect(() => {
@@ -11,12 +13,11 @@ function Instagram(props) {
 			.then((res) => res.json())
 			.then(
 				(result) => {
-					setIsLoaded(true);
 					setImages(result.graphql.user.edge_owner_to_timeline_media.edges);
+					setLoaded(true);
 				},
 				(error) => {
 					console.log(error);
-					setIsLoaded(true);
 				}
 			);
 	}, [props.accountName]);
@@ -30,17 +31,19 @@ function Instagram(props) {
 			{isLoaded ? (
 				<div className={styles.grid}>
 					{images.slice(0, getCount()).map((image, index) => (
-						<a href={image.node.display_url} className={styles.wrapper} key={index}>
-							<img
-								src={image.node.thumbnail_resources[props.thumbnailResolution].src}
+						<a href="https://www.instagram.com/waterbouldergames/" className={styles.wrapper} key={index}>
+							<LazyImage
+								srcset={image.node.thumbnail_resources}
+								thumbnail={image.node.thumbnail_src}
 								className={styles.image}
 								alt={image.node.accessibility_caption}
+								key={index}
 							/>
 						</a>
 					))}
 				</div>
 			) : (
-				<>Loading</>
+				<img src={rings} className={styles.loader} alt="Loader" />
 			)}
 		</section>
 	);
@@ -49,14 +52,12 @@ function Instagram(props) {
 Instagram.propTypes = {
 	accountName: PropTypes.string,
 	count: PropTypes.number,
-	thumbnailResolution: PropTypes.number,
 	title: PropTypes.string,
 };
 
 Instagram.defaultProps = {
 	accountName: 'waterbouldergames',
-	count: 8,
-	thumbnailResolution: 2,
+	count: 0,
 	title: 'Fotogalerie',
 };
 

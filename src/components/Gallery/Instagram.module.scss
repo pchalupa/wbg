@@ -1,19 +1,31 @@
+@import '../../Tools.scss';
+@import '../../Colors.scss';
+
 .container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 
 	.grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(25%, 320px));
-		justify-content: center;
+		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+		grid-auto-rows: minmax(320px, 1fr);
+		grid-auto-flow: row dense;
+		width: 100%;
+		background-color: rgba($cb, 0.9);
 
 		.wrapper {
 			display: flex;
 			justify-content: center;
-			img {
-				width: 100%;
-			}
+			align-items: center;
+			@include drop-shadow;
 		}
+	}
+
+	.loader {
+		width: 5vmax;
+		padding: 5vmax;
+		filter: invert(0.25);
 	}
 }
