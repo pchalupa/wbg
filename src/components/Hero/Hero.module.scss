@@ -23,6 +23,11 @@
 		@include border-radius;
 		@include drop-shadow;
 
+		h1 {
+			margin-top: 4vh;
+			max-width: 50%;
+		}
+
 		.video {
 			align-self: center;
 			color: $cb;
@@ -51,6 +56,9 @@
 	@media screen and (max-width: 760px) {
 		#hero {
 			display: none;
+		}
+		.wrapper h1 {
+			max-width: 100%;
 		}
 	}
 }
