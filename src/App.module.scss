@@ -1,19 +1,12 @@
 @import './Colors.scss';
 
 .container {
-	width: 100vw;
-	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
 
-	.wrapper {
-		display: grid;
-		grid-template-rows: 50vh auto 1fr 50vh auto 0.25fr;
-		grid-template-areas:
-			'hero'
-			'about'
-			'photogallery'
-			'registraction'
-			'map'
-			'sponzors';
-		grid-gap: 5vh;
+	section,
+	article {
+		padding-bottom: 10vh;
+		scroll-snap-align: start;
 	}
 }

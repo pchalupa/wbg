@@ -6,22 +6,24 @@ import ContactForm from './components/Form/Contactform';
 import GoogleMaps from './components/Map/GoogleMaps';
 import MainMenu from './components/Menu/MainMenu';
 import Logos from './components/Gallery/Logos';
+import Bar from './components/Loader/Bar';
 import { links, socialSites } from './constants';
 import styles from './App.module.scss';
 
 function App() {
 	return (
-		<div className={styles.container}>
-			<MainMenu links={links} socialSites={socialSites} />
-			<main className={styles.wrapper}>
+		<>
+			<main className={styles.container}>
 				<Hero />
 				<About />
-				<Instagram count={0} />
-				<ContactForm />
+				<Instagram count={8} />
+				<ContactForm title={'Registrační formulář'} />
 				<GoogleMaps />
-				<Logos />
+				<Logos title="" />
 			</main>
-		</div>
+			<MainMenu links={links} socialSites={socialSites} />
+			<Bar />
+		</>
 	);
 }
 
