@@ -11,6 +11,7 @@ function Hero() {
 				<img src={logo} alt="Logo" id={styles.logo} loading="lazy" />
 				<h1>Zažij jediné závody v lezení nad vodou v ČR!</h1>
 				<a href="https://www.facebook.com/waterbouldergames/videos/413009075775419/" className={styles.video}>
+					<span>Přehrát video</span>
 					<FaRegPlayCircle />
 				</a>
 			</div>
