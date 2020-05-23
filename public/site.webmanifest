@@ -1,0 +1,19 @@
+{
+    "name": "Water Boulder Games - Velk\u00e9 Mezi\u0159\u00ed\u010d\u00ed",
+    "short_name": "Water Boulder Games - Velk\u00e9 Mezi\u0159\u00ed\u010d\u00ed",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
