@@ -40,7 +40,7 @@ function MainMenu(props) {
 				</div>
 				<div className={styles.footer}>
 					{props.socialSites.map((site, index) => (
-						<a href={site.link} key={index}>
+						<a href={site.link} key={index} className={styles.link}>
 							{getSocialIcon(site.title)}
 						</a>
 					))}
