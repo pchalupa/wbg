@@ -44,6 +44,10 @@
 				}
 			}
 
+			select:focus {
+				transform: none;
+			}
+
 			input {
 				height: 5vh;
 			}
