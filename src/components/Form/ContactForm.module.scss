@@ -17,8 +17,8 @@
 			display: flex;
 			flex-direction: column;
 			flex: 40%;
-			min-width: 245px;
-			margin: 3vh 5%;
+			min-width: 240px;
+			margin: 3vh 3%;
 
 			span {
 				font-weight: 700;
@@ -27,6 +27,7 @@
 			}
 
 			input,
+			select,
 			textarea {
 				border: none;
 				background-color: rgba($cb, 0.05);
@@ -34,30 +35,155 @@
 				padding: 1vmax;
 				outline: none;
 				font-weight: 700;
+
+				&:focus {
+					transform: scale(1.1);
+					@include drop-shadow;
+					transition: 150ms ease-in;
+					outline: none;
+				}
 			}
 
 			input {
 				height: 5vh;
 			}
 
+			select {
+				height: 7.5vh;
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				appearance: none;
+				background-image: linear-gradient(45deg, transparent 50%, rgba($cb, 0.25) 50%),
+					linear-gradient(135deg, rgba($cb, 0.25) 50%, transparent 50%);
+				background-size: 10px 10px, 10px 10px;
+				background-repeat: no-repeat;
+				background-position: calc(97% - 20px) center, calc(97% - 10px) center;
+			}
+
 			textarea {
 				resize: none;
 				width: 100%;
 			}
+
+			&.checkbox {
+				display: flex;
+				flex-direction: row-reverse;
+				justify-content: flex-end;
+				align-items: center;
+				flex: 1 0 100%;
+
+				input {
+					margin-right: 1vmax;
+				}
+
+				span {
+					font-size: 1rem;
+					margin: 0;
+				}
+			}
 		}
 
-		#submit {
-			width: 100%;
-			margin: 5vh 25%;
-			padding: 2vh;
-			border: none;
-			border-radius: 1vmax;
-			background-color: $cp;
-			text-align: center;
-			text-transform: uppercase;
-			font-weight: 700;
-			font-size: 1rem;
-			cursor: pointer;
+		h3 {
+			flex: 1 0 100%;
+			margin: 3vh 3%;
+			font-weight: 400;
 		}
+
+		.reCaptchaContainer {
+			display: flex;
+			flex-direction: column;
+			flex: 1 0 100%;
+			justify-content: center;
+			align-items: center;
+			min-width: 240px;
+			margin: 3vh 3%;
+		}
+
+		.errorWrapper {
+			display: flex;
+			flex-direction: column;
+			flex: 1 0 100%;
+			justify-content: center;
+			align-items: center;
+			min-width: 240px;
+			margin: 3vh 3%;
+			background-color: $cerror;
+			color: $cw;
+			@include border-radius;
+
+			a {
+				color: $cw;
+				font-weight: 700;
+			}
+		}
+
+		&.sending {
+			label,
+			h3 {
+				opacity: 0.5;
+			}
+		}
+
+		&.sended {
+			height: 0;
+			overflow: hidden;
+			transition: 250ms ease-in;
+		}
+	}
+
+	button {
+		width: 100%;
+		margin: 3vh 25%;
+		padding: 2vh;
+		border: none;
+		border-radius: 1vmax;
+		background-color: $cp;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 1rem;
+		cursor: pointer;
+		transition: 150ms ease-in;
+
+		&.loading {
+			background: linear-gradient(to right, rgba($cp, 0.5) 0, rgba($cp, 0.75) 15%, rgba($cp, 1) 10%);
+			animation-duration: 5s;
+			animation-fill-mode: forwards;
+			animation-iteration-count: infinite;
+			animation-name: gradientAnimation;
+			animation-timing-function: linear;
+		}
+
+		&.reset {
+			background-color: $csucces;
+			margin: 5vh 0;
+		}
+
+		.icon {
+			margin-left: 1vmax;
+		}
+
+		&:hover {
+			transform: scale(1.1);
+			@include drop-shadow;
+			transition: 150ms ease-in;
+		}
+	}
+
+	.infoWrapper {
+		display: flex;
+		flex-direction: column;
+		button {
+			margin-top: 1vh;
+		}
+	}
+}
+
+@keyframes gradientAnimation {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 100em 0;
 	}
 }
