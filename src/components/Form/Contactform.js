@@ -40,7 +40,7 @@ class ContactForm extends React.Component {
 
 	handleSendForm = (event) => {
 		event.preventDefault();
-		if (!this.state.validate) {
+		if (this.state.validate) {
 			this.setState({ formState: this.state.formStateValues[2] });
 			const formData = new FormData();
 			this.state.data.forEach((value, key) => {
@@ -226,6 +226,7 @@ class ContactForm extends React.Component {
 							value="Souhlasím se zpracováním osobních údajů."
 							onChange={this.handleInputChange}
 							disabled={this.state.formState === this.state.formStateValues[2] ? true : false}
+							required
 						/>
 					</label>
 					<div className={styles.reCaptchaContainer}>
