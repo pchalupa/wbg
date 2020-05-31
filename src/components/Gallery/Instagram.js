@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import LazyImage from '../Image/LazyImage';
 import styles from './Instagram.module.scss';
-import rings from './rings.svg';
+import rings from '../../Images/rings.svg';
 
 function Instagram(props) {
 	const [isLoaded, setLoaded] = useState(false);
