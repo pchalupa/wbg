@@ -9,7 +9,7 @@ export const links = [
 
 export const socialSites = [
 	{ title: 'Facebook', link: 'https://www.facebook.com/events/1065790363770438/' },
-	{ title: 'Instagram', destination: 'https://www.instagram.com/waterbouldergames/' },
+	{ title: 'Instagram', link: 'https://www.instagram.com/waterbouldergames/' },
 ];
 
 export const winners = [
