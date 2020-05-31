@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import styles from './Bar.module.scss';
+import styles from './SrollPosition.module.scss';
 
-function Bar() {
+function SrollPosition() {
 	const getPosition = () => {
 		return Math.round((window.scrollY / (document.body.clientHeight - window.innerHeight)) * 100);
 	};
@@ -15,4 +15,4 @@ function Bar() {
 	return <div className={styles.container} style={{ width: `${scrollPosition}%` }}></div>;
 }
 
-export default Bar;
+export default SrollPosition;
