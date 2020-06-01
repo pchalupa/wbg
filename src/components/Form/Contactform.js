@@ -219,7 +219,7 @@ class ContactForm extends React.Component {
 							disabled={this.state.formState === this.state.formStateValues[2] ? true : false}></textarea>
 					</label>
 					<label className={styles.checkbox}>
-						<span>Souhlasím se zpracování osobních údajů</span>
+						<span>Souhlasím se zpracováním osobních údajů</span>
 						<input
 							type="checkbox"
 							name="gdpr"
