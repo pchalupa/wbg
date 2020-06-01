@@ -44,6 +44,7 @@
 				}
 			}
 
+			input[type='date'],
 			select:focus {
 				transform: none;
 			}
@@ -146,6 +147,7 @@
 		text-transform: uppercase;
 		font-weight: 700;
 		font-size: 1rem;
+		outline: none;
 		cursor: pointer;
 		transition: 150ms ease-in;
 
