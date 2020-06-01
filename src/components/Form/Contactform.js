@@ -68,7 +68,7 @@ class ContactForm extends React.Component {
 			setTimeout(() => {
 				this.setState({ formState: this.state.formStateValues[3] });
 				this.header.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-			}, 1500);
+			}, 1000);
 		} else {
 			this.setState({ formState: this.state.formStateValues[4] });
 		}
@@ -131,7 +131,7 @@ class ContactForm extends React.Component {
 						<span>Datum narození</span>
 						<input
 							type="date"
-							name="date"
+							name="birthday"
 							onChange={this.handleInputChange}
 							disabled={this.state.formState === this.state.formStateValues[2] ? true : false}
 							required
