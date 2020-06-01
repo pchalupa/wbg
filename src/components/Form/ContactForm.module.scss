@@ -49,6 +49,11 @@
 				transform: none;
 			}
 
+			input[type='checkbox'] {
+				transform: none;
+				box-shadow: none;
+			}
+
 			input {
 				height: 5vh;
 			}
