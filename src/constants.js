@@ -14,19 +14,9 @@ export const socialSites = [
 
 export const winners = [
 	{
-		title: 2015,
-		man: ['Štěpán Stráník', 'Vilda Chejn', 'Marek Schaffer'],
-		woman: ['Eliška Vlčková', 'Eliška Handlířová', 'Michaela Matúšová'],
-	},
-	{
-		title: 2016,
-		man: ['Rishat Khaibullin', 'Martin Spilka', 'Martin Spilka'],
-		woman: ['Martin Spilka', 'Michaela Matúšová', 'Nikola Janoušková'],
-	},
-	{
-		title: 2017,
-		man: ['Rishat Khaibullin ', 'Martin Stráník', 'Michal Běhounek'],
-		woman: ['Dominika Dupalová', 'Petra Růžičková', 'Michaela Matúšová'],
+		title: 2019,
+		man: ['Martin Dvorský', 'Jirka Bradáč', 'Matouš Bradáč'],
+		woman: ['Dominika Dupalová', 'Áďa Bajerová', 'Háňa Štorkánová'],
 	},
 	{
 		title: 2018,
@@ -34,8 +24,18 @@ export const winners = [
 		woman: ['Adéla Bajerová', 'Kateřina Valeková', 'Hana Štorkanová'],
 	},
 	{
-		title: 2019,
-		man: ['Martin Dvorský', 'Jirka Bradáč', 'Matouš Bradáč'],
-		woman: ['Dominika Dupalová', 'Áďa Bajerová', 'Háňa Štorkánová'],
+		title: 2017,
+		man: ['Rishat Khaibullin ', 'Martin Stráník', 'Michal Běhounek'],
+		woman: ['Dominika Dupalová', 'Petra Růžičková', 'Michaela Matúšová'],
+	},
+	{
+		title: 2016,
+		man: ['Rishat Khaibullin', 'Martin Spilka', 'Michal Běhounek'],
+		woman: ['Martin Spilka', 'Michaela Matúšová', 'Nikola Janoušková'],
+	},
+	{
+		title: 2015,
+		man: ['Štěpán Stráník', 'Vilda Chejn', 'Marek Schaffer'],
+		woman: ['Eliška Vlčková', 'Eliška Handlířová', 'Michaela Matúšová'],
 	},
 ];
