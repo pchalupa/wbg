@@ -40,7 +40,7 @@ class ContactForm extends React.Component {
 
 	handleSendForm = (event) => {
 		event.preventDefault();
-		if (!this.state.validate) {
+		if (this.state.validate) {
 			this.setState({ formState: this.state.formStateValues[2] });
 			const formData = new FormData();
 			this.state.data.forEach((value, key) => {
