@@ -40,7 +40,7 @@ class ContactForm extends React.Component {
 
 	handleSendForm = (event) => {
 		event.preventDefault();
-		if (this.state.validate) {
+		if (!this.state.validate) {
 			this.setState({ formState: this.state.formStateValues[2] });
 			const formData = new FormData();
 			this.state.data.forEach((value, key) => {
@@ -254,8 +254,13 @@ class ContactForm extends React.Component {
 				{this.state.formState === this.state.formStateValues[3] && (
 					<div className={styles.infoWrapper}>
 						<p>
-							Jste zaregistován jako:{' '}
-							<b>{`${this.state.data.get('name')} ${this.state.data.get('surname')}`}</b>
+							Jste zaregistován jako:
+							<b>{` ${this.state.data.get('name')} ${this.state.data.get('surname')}`}</b>.
+						</p>
+						<p>
+							{' '}
+							Na zadanou e-mailovou adresu jsme Vám zaslali registrační e-mail. Pokud jej nevidíte,
+							zkontrolujte si prosím SPAM.
 						</p>
 						<button className={resetButtonClass} onClick={this.handleResetForm}>
 							<span>Nová registrace</span>
