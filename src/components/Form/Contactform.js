@@ -165,7 +165,10 @@ class ContactForm extends React.Component {
 							</option>
 							<option value="muži">Muži</option>
 							<option valueu="ženy">Ženy</option>
-							<option valueu="děti">Děti</option>
+							<option valueu="děti 2011 a mladší">Děti 2011 a mladší</option>
+							<option valueu="děti 2011 a mladší">Děti 2009 - 2010</option>
+							<option valueu="děti 2011 a mladší">Děti 2007 - 2008</option>
+							<option valueu="děti 2011 a mladší">Děti 2005 - 2006</option>
 						</select>
 					</label>
 					<h3>Adresa</h3>
@@ -207,7 +210,6 @@ class ContactForm extends React.Component {
 							name="telephone"
 							onChange={this.handleInputChange}
 							disabled={this.state.formState === this.state.formStateValues[2] ? true : false}
-							required
 						/>
 					</label>
 					<label>
@@ -256,7 +258,7 @@ class ContactForm extends React.Component {
 							<b>{`${this.state.data.get('name')} ${this.state.data.get('surname')}`}</b>
 						</p>
 						<button className={resetButtonClass} onClick={this.handleResetForm}>
-							<span>Opětovat registraci</span>
+							<span>Nová registrace</span>
 							<FaSync className={styles.icon} />
 						</button>
 					</div>
