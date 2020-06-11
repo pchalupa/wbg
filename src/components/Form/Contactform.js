@@ -234,7 +234,9 @@ class ContactForm extends React.Component {
 					<label className={styles.checkbox}>
 						<span>
 							Jsem seznámen s{' '}
-							<a href="https://drive.google.com/file/d/11DHNPJ_QGxsr51vu8-fYLxZzxkMmGGU0/view">
+							<a
+								href="https://drive.google.com/file/d/11DHNPJ_QGxsr51vu8-fYLxZzxkMmGGU0/view"
+								target="_blank">
 								propozicemi závodu
 							</a>
 						</span>
@@ -275,7 +277,7 @@ class ContactForm extends React.Component {
 						</p>
 						<p>
 							{' '}
-							Na zadanou e-mailovou adresu jsme Vám zaslali registrační e-mail. Pokud jej nevidíte,
+							Na zadanou e-mailovou adresu jsme Vám zaslali registrační e-mail. Pokud jej nevidíte,{' '}
 							<b>zkontrolujte si prosím SPAM</b>.
 						</p>
 						<button className={resetButtonClass} onClick={this.handleResetForm}>
