@@ -2,9 +2,14 @@ export const links = [
 	{ title: 'Domů', destination: '#domu' },
 	{ title: 'O závodě', destination: '#o-zavode' },
 	{ title: 'Fotogalerie', destination: '#fotogalerie' },
+	{ title: 'Registrace', destination: '#registrace' },
 	{ title: 'Vítězové', destination: '#vitezove' },
 	{ title: 'Mapa', destination: '#mapa' },
 	{ title: 'Sponzoři', destination: '#sponzori' },
+	{
+		title: 'Propozice závodu',
+		destination: 'https://drive.google.com/file/d/11DHNPJ_QGxsr51vu8-fYLxZzxkMmGGU0/view',
+	},
 ];
 
 export const socialSites = [
