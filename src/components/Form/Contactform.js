@@ -231,6 +231,22 @@ class ContactForm extends React.Component {
 							required
 						/>
 					</label>
+					<label className={styles.checkbox}>
+						<span>
+							Jsem seznámen s{' '}
+							<a href="https://drive.google.com/file/d/11DHNPJ_QGxsr51vu8-fYLxZzxkMmGGU0/view">
+								propozicemi závodu
+							</a>
+						</span>
+						<input
+							type="checkbox"
+							name="gdpr"
+							value="Jsem seznámen s propozicemi závodu"
+							onChange={this.handleInputChange}
+							disabled={this.state.formState === this.state.formStateValues[2] ? true : false}
+							required
+						/>
+					</label>
 					<div className={styles.reCaptchaContainer}>
 						<div>
 							<ReCAPTCHA
@@ -260,7 +276,7 @@ class ContactForm extends React.Component {
 						<p>
 							{' '}
 							Na zadanou e-mailovou adresu jsme Vám zaslali registrační e-mail. Pokud jej nevidíte,
-							zkontrolujte si prosím SPAM.
+							<b>zkontrolujte si prosím SPAM</b>.
 						</p>
 						<button className={resetButtonClass} onClick={this.handleResetForm}>
 							<span>Nová registrace</span>
