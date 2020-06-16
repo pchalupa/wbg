@@ -221,11 +221,18 @@ class ContactForm extends React.Component {
 							disabled={this.state.formState === this.state.formStateValues[2] ? true : false}></textarea>
 					</label>
 					<label className={styles.checkbox}>
-						<span>Souhlasím se zpracováním osobních údajů</span>
+						<span>
+							Souhlasím s podmínkami soutěže uvedené v{' '}
+							<a
+								href="https://drive.google.com/file/d/11DHNPJ_QGxsr51vu8-fYLxZzxkMmGGU0/view"
+								target="_blank">
+								propozicích závodu
+							</a>
+						</span>
 						<input
 							type="checkbox"
 							name="gdpr"
-							value="Souhlasím se zpracováním osobních údajů."
+							value="Souhlasím s podmínkami soutěže uvedené v propozicích závodu"
 							onChange={this.handleInputChange}
 							disabled={this.state.formState === this.state.formStateValues[2] ? true : false}
 							required
@@ -233,17 +240,16 @@ class ContactForm extends React.Component {
 					</label>
 					<label className={styles.checkbox}>
 						<span>
-							Jsem seznámen s{' '}
 							<a
-								href="https://drive.google.com/file/d/11DHNPJ_QGxsr51vu8-fYLxZzxkMmGGU0/view"
+								href="https://drive.google.com/file/d/1svJ4F5mU52FmPnzJTvx_6mPXwMAVzcaN/view"
 								target="_blank">
-								propozicemi závodu
+								Souhlasím s prohlášením závodníka a se zpracováním osobních údajů
 							</a>
 						</span>
 						<input
 							type="checkbox"
 							name="gdpr"
-							value="Jsem seznámen s propozicemi závodu"
+							value="Souhlasím s prohlášením závodníka a se zpracováním osobních údajů"
 							onChange={this.handleInputChange}
 							disabled={this.state.formState === this.state.formStateValues[2] ? true : false}
 							required
