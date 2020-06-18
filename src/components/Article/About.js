@@ -7,8 +7,8 @@ function About() {
 			<h2>6. ročník jediného boulder závodu nad vodou v Česku je tady!</h2>
 			<p className={styles.text}>
 				Vyzkoušej si lezení nad vodou u Fajtova kopce nedaleko Velkého Meziříčí. Kvalifikační cesta je za 6
-				UIAA, závodíme v mužské, ženské a dětské kategorii. Registrace probíhá on-line a s sebou si sbal i
-				plavky, máš to v suchu!
+				UIAA, závodíme v mužské, ženské a dětské kategorii. Registrace probíhá <a href="#registrace">on-line</a>
+				. S sebou si sbal i plavky, ať to máš to v suchu!
 			</p>
 		</article>
 	);
