@@ -7,7 +7,7 @@ import MainMenu from './components/Menu/MainMenu';
 import Logos from './components/Gallery/Logos';
 import SrollPosition from './components/Scroll/SrollPosition';
 import Timeline from './components/Timeline/Timeline';
-import ContactForm from './components/Form/ContactForm';
+import ContactForm from './components/Form/Contactform';
 import { links, socialSites, winners } from './constants';
 import styles from './App.module.scss';
 
