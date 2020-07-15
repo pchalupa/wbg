@@ -18,7 +18,6 @@ function App() {
 				<Hero />
 				<About />
 				<Instagram count={9} />
-				<ContactForm title="Registrační formulář" />
 				<Timeline title="Vítězové 🏆" data={winners} />
 				<GoogleMaps />
 				<Logos title="" />
