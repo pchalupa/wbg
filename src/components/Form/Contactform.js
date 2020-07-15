@@ -166,9 +166,9 @@ class ContactForm extends React.Component {
 							<option value="muži">Muži</option>
 							<option value="ženy">Ženy</option>
 							<option value="děti 2011 a mladší">Děti 2011 a mladší</option>
-							<option value="děti 2011 a mladší">Děti 2009 - 2010</option>
-							<option value="děti 2011 a mladší">Děti 2007 - 2008</option>
-							<option value="děti 2011 a mladší">Děti 2005 - 2006</option>
+							<option value="děti 2009 - 2010">Děti 2009 - 2010</option>
+							<option value="děti 2007 - 2008">Děti 2007 - 2008</option>
+							<option value="děti 2005 - 2006">Děti 2005 - 2006</option>
 						</select>
 					</label>
 					<h3>Adresa</h3>
