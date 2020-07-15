@@ -224,8 +224,7 @@ class ContactForm extends React.Component {
 						<span>
 							Souhlasím s podmínkami soutěže uvedené v{' '}
 							<a
-								href="https://drive.google.com/file/d/11DHNPJ_QGxsr51vu8-fYLxZzxkMmGGU0/view"
-								target="_blank">
+								href="https://drive.google.com/file/d/11DHNPJ_QGxsr51vu8-fYLxZzxkMmGGU0/view">
 								propozicích závodu
 							</a>
 						</span>
@@ -241,8 +240,7 @@ class ContactForm extends React.Component {
 					<label className={styles.checkbox}>
 						<span>
 							<a
-								href="https://drive.google.com/file/d/1svJ4F5mU52FmPnzJTvx_6mPXwMAVzcaN/view"
-								target="_blank">
+								href="https://drive.google.com/file/d/1svJ4F5mU52FmPnzJTvx_6mPXwMAVzcaN/view">
 								Souhlasím s prohlášením závodníka a se zpracováním osobních údajů
 							</a>
 						</span>
