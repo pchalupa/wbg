@@ -2,7 +2,6 @@ export const links = [
 	{ title: 'Domů', destination: '#domu' },
 	{ title: 'O závodě', destination: '#o-zavode' },
 	{ title: 'Fotogalerie', destination: '#fotogalerie' },
-	{ title: 'Registrace', destination: '#registrace' },
 	{ title: 'Vítězové', destination: '#vitezove' },
 	{ title: 'Mapa', destination: '#mapa' },
 	{ title: 'Sponzoři', destination: '#sponzori' },
