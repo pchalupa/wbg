@@ -18,6 +18,11 @@ export const socialSites = [
 
 export const winners = [
 	{
+		title: 2020,
+		man: ['Matěj Hlaváček', 'Ondřej Hlinka', 'Ríša Pařil'],
+		woman: ['Sabina Škoda Skoupá', 'Dominika Dupalová', 'Žofie Košťálková'],
+	},
+	{
 		title: 2019,
 		man: ['Martin Dvorský', 'Jirka Bradáč', 'Matouš Bradáč'],
 		woman: ['Dominika Dupalová', 'Áďa Bajerová', 'Háňa Štorkánová'],
